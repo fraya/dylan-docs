@@ -9,19 +9,28 @@ image](https://github.com/sphinx-doc/sphinx-docker-images) and includes:
 - [Furo theme](https://github.com/pradyunsg/furo), wich is the default
   them used in Opendylan's website.
 
+Why? Opendylan packages' documentation expect that `sphinx-extension`
+is installed in a specific directory and needs the 'furo' theme. It
+makes the documentation generated in a GH Action difficult to make:
+
+- Needs to install dylan-tool
+- dylan-tool installs the dependencies of `sphinx-extensions`
+- Download 'furo' theme.
+- If the package don't 
+
 ## Usage
 
 Download image
 
 ````
-docker pull ghcr.io/fraya/dylan-docs:main
+docker pull ghcr.io/fraya/dylan-docs
 ````
 
 Generate documents from directory `./docs` where a Sphinx project
 already exists.
 
 ````
-docker run --rm -v ./docs:/doc --user "$(id -u):$(id -g)" dylan-docs make html
+docker run --rm -v ./docs:/docs --user "$(id -u):$(id -g)" ghrc.io/fraya/dylan-docs make html
 ````
 
 ## Build the image
