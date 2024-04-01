@@ -31,7 +31,7 @@ Generate documents from directory `./docs` where a Sphinx project
 already exists.
 
 ````
-docker run --rm -v ./docs:/docs --user "$(id -u):$(id -g)" ghrc.io/fraya/dylan-docs make html
+docker run --rm -v ./docs:/docs --user "$(id -u):$(id -g)" ghcr.io/fraya/dylan-docs make html
 ````
 
 ## Build the image
