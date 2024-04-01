@@ -34,6 +34,12 @@ already exists.
 docker run --rm -v ./docs:/docs --user "$(id -u):$(id -g)" ghcr.io/fraya/dylan-docs make html
 ````
 
+with `podman`
+
+```
+podman run --rm -v ./docs:/docs:z ghcr.io/fraya/dylan-docs make html
+```
+
 ## Build the image
 
 To build the image, for instance with version `0.2.0` of `sphinx-extensions`:
