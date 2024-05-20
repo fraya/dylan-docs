@@ -15,8 +15,8 @@ FROM sphinxdoc/sphinx
 # sphinx-extensions version, i.e., 0.2.0
 ARG VERSION
 
-# install 'furo' theme
-RUN pip install furo
+ADD requirements.txt /docs
+RUN pip3 install -r requirements.txt
 
 # File downloaded from sphinx-extensions project with extension .tgz
 # If the file is a local .tgz it is uncompressed with ADD
