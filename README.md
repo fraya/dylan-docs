@@ -9,6 +9,10 @@ image](https://github.com/sphinx-doc/sphinx-docker-images) and includes:
 - [Furo theme](https://github.com/pradyunsg/furo), wich is the default
   them used in Opendylan's website.
 
+- [Sphinx
+  copybutton](https://sphinx-copybutton.readthedocs.io/en/latest/) to
+  add a copy button in the right of the code blocks. See usage below.
+
 | :exclamation: Important |
 |-------------------------|
 
@@ -46,6 +50,19 @@ To build the image, for instance with version `0.2.0` of `sphinx-extensions`:
 
 ````
 docker build -t docker-docs:0.2.0 -t docker-docs:latest --build-arg VERSION=0.2.0 .
+````
+
+### Copy button
+
+To use _copy button_ add in your `conf.py` configuration file the
+`sphinx_copybutton` to your extension list, e.g.:
+
+````python
+extensions = [
+  ...
+  'sphinx_copybutton'
+  ...
+]
 ````
 
 ## Github Packages
