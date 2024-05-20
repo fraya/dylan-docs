@@ -49,7 +49,7 @@ podman run --rm -v ./docs:/docs:z ghcr.io/fraya/dylan-docs make html
 To build the image, for instance with version `0.2.0` of `sphinx-extensions`:
 
 ````
-docker build -t docker-docs:0.2.0 -t docker-docs:latest --build-arg VERSION=0.2.0 .
+docker build -t docker-docs:0.2.0 -t docker-docs:latest --build-arg SPHINX_EXTENSIONS_VERSION=0.2.0 .
 ````
 
 ### Copy button
