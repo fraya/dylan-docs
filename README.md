@@ -43,15 +43,6 @@ with `podman`
 ```
 podman run --rm -v ./docs:/docs:z ghcr.io/fraya/dylan-docs make html
 ```
-
-## Build the image
-
-To build the image, for instance with version `0.2.0` of `sphinx-extensions`:
-
-````
-docker build -t docker-docs:0.2.0 -t docker-docs:latest --build-arg SPHINX_EXTENSIONS_VERSION=0.2.0 .
-````
-
 ### Copy button
 
 To use _copy button_ add in your `conf.py` configuration file the
@@ -63,6 +54,14 @@ extensions = [
   'sphinx_copybutton'
   ...
 ]
+````
+
+## Build the image
+
+To build the image, for instance with version `0.2.0` of `sphinx-extensions`:
+
+````
+docker build -t docker-docs:0.2.0 -t docker-docs:latest --build-arg SPHINX_EXTENSIONS_VERSION=0.2.0 .
 ````
 
 ## Github Packages
