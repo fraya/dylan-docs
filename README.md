@@ -56,6 +56,23 @@ extensions = [
 ]
 ````
 
+### Creation of a document project
+
+To create the structure of the documentation for a new project, we use
+the interactive `sphinx-quickstart`.
+
+First, create the documentation directory
+
+````
+mkdir docs; cd docs
+````
+
+Then we call the container in an interactive way:
+
+````
+podman run --rm -ti -v ./docs:/docs:z ghcr.io/fraya/dylan-docs sphinx-quickstart
+````
+
 ## Build the image
 
 To build the image, for instance with version `0.2.0` of `sphinx-extensions`:
