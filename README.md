@@ -6,7 +6,7 @@ image](https://github.com/sphinx-doc/sphinx-docker-images) and includes:
 
 - [Dylan Sphinx extensions](https://github.com/dylan-lang/sphinx-extensions)
 
-- [Furo theme](https://github.com/pradyunsg/furo), wich is the default
+- [Furo theme](https://github.com/pradyunsg/furo), which is the default
   them used in Opendylan's website.
 
 - [Sphinx
@@ -15,7 +15,7 @@ image](https://github.com/sphinx-doc/sphinx-docker-images) and includes:
 
 - [Sphinx PlantUML](https://github.com/sphinx-contrib/plantuml) to
   create UML diagrams and other software development related formats
-  (see [PlantUML in Wikipedia](https://en.wikipedia.org/wiki/PlantUML).
+  (see [PlantUML in Wikipedia](https://en.wikipedia.org/wiki/PlantUML)).
   See usage below.
 
 | :exclamation: Important |
@@ -26,7 +26,7 @@ This container requires that the path to `sphinxcontrib` in the file
 
     '../../_packages/sphinx-extensions/current/src/sphinxcontrib'
 
-wich is the standard path where `dylan-tool` install the dependency.
+which is the standard path where `dylan-tool` install the dependency.
 
 ## Usage
 
