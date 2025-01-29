@@ -13,6 +13,11 @@ image](https://github.com/sphinx-doc/sphinx-docker-images) and includes:
   copybutton](https://sphinx-copybutton.readthedocs.io/en/latest/) to
   add a copy button in the right of the code blocks. See usage below.
 
+- [Sphinx PlantUML](https://github.com/sphinx-contrib/plantuml) to
+  create UML diagrams and other software development related formats
+  (see [PlantUML in Wikipedia](https://en.wikipedia.org/wiki/PlantUML).
+  See usage below.
+
 | :exclamation: Important |
 |-------------------------|
 
@@ -43,6 +48,7 @@ with `podman`
 ```
 podman run --rm -v ./docs:/docs:z ghcr.io/fraya/dylan-docs make html
 ```
+
 ### Copy button
 
 To use _copy button_ add in your `conf.py` configuration file the
@@ -55,6 +61,23 @@ extensions = [
   ...
 ]
 ````
+
+### PlantUML
+
+Add `sphinxcontrib.plantuml` to your extension list in your `conf.py`:
+
+```python
+extensions = [
+  'sphinxcontrib.plantuml',
+]
+```
+
+And specify the plantuml command (included in the image) in your
+`conf.py`:
+
+```python
+plantuml = '/usr/local/bin/plantuml'
+```
 
 ### Creation of a document project
 
