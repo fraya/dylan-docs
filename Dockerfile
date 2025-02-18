@@ -24,7 +24,7 @@ RUN apt-get update && \
 
 RUN curl -fsSL "$PLANTUML_DOWNLOAD_URL" -o /usr/local/plantuml.jar \
     && chmod a+r /usr/local/plantuml.jar
-COPY plantuml /usr/local/bin/
+COPY files/plantuml /usr/local/bin/
 
 # Download, decompress and install Sphinx extensions
 
