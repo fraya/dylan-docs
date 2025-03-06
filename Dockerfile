@@ -4,7 +4,7 @@ ENV BUILD_DEPENDS \
     curl \
     default-jre
 
-ENV SPHINX_EXTENSIONS_VERSION 1.0.0
+ENV SPHINX_EXTENSIONS_VERSION 1.1.0
 ENV SPHINX_EXTENSIONS v$SPHINX_EXTENSIONS_VERSION.tar.gz
 ENV SPHINX_EXTENSIONS_DOWNLOAD_URL https://github.com/dylan-lang/sphinx-extensions/archive/refs/tags/$SPHINX_EXTENSIONS
 ENV SPHINX_EXTENSIONS_HOME /_packages/sphinx-extensions/current/src
